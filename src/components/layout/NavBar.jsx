@@ -16,12 +16,12 @@ const Navbar = () => {
 
   return (
     <nav className="w-full h-14 bg-white p-4 text-black mx-auto flex justify-between items-center">
-      <img src={logoImage} alt="Hero" className="w-12 h-auto" />
+      <Link to="/" className="mr-4 cursor-pointer"><img src={logoImage} alt="Hero" className="w-12 h-auto" /></Link>
       
       <ul className="md:flex hidden">
         <li className="mx-3 cursor-pointer">
-          <Link to="/" className="mr-4 cursor-pointer">
-            Home
+          <Link to="/how_it_works" className="mr-4 cursor-pointer">
+            How it works 
           </Link>
         </li>
         <li className="mx-3 cursor-pointer">
@@ -30,7 +30,7 @@ const Navbar = () => {
           </Link>
         </li>
         <li className="mx-3 cursor-pointer">
-          <Link to="/products" className="mr-4">
+          <Link to="/sell_an_attire" className="mr-4">
             Sell an Attire
           </Link>
         </li>
@@ -67,7 +67,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="my-4 text-sm">
-            <Link to="/products" onClick={handleNav}>
+            <Link to="/sell_an_attire" onClick={handleNav}>
               Sell an Attire
             </Link>
           </li>
