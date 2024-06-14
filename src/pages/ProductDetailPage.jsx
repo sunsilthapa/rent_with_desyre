@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import DatePicker from 'react-date-picker';
 import { FaStar } from 'react-icons/fa';
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import { Link } from 'react-router-dom';
 
 const ProductDetailPage = () => {
-  const [value, onChange] = useState(new Date());
+  const [startDate, setStartDate] = useState(new Date());
   const [detailsOpen, setDetailsOpen] = useState(false);
   const [sizeOpen, setSizeOpen] = useState(false);
   const [shareOpen, setShareOpen] = useState(false);
@@ -63,12 +65,15 @@ const ProductDetailPage = () => {
             <label htmlFor="10-days">10 Days</label>
           </li>
         </ul>
-       <div className='flex'> 
+       <div className='flex mb-2'> 
         <span mr-3>Date:</span>
-        <DatePicker onChange={onChange} value={value} className="mb-4" /></div>
-        <button className="bg-black text-white py-2 px-4 rounded-lg shadow-md hover:bg-gray-800 transition duration-300">
-          Rent now
-        </button>
+        <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
+        </div>
+       <Link to='/cart'>
+          <button className="bg-black text-white py-2 px-4 rounded-lg shadow-md hover:bg-gray-800 transition duration-300">
+            Rent now
+          </button>
+       </Link>
         <div className="mt-4">
           <div className="flex justify-between items-center cursor-pointer" onClick={toggleDetails}>
             <p className="font-medium uppercase">Product Details</p>
