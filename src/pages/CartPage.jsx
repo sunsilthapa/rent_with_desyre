@@ -1,11 +1,14 @@
 import React from "react";
 import CartItem from "../components/CardItemCard";
 import {  FaCircleCheck } from "react-icons/fa6";
+import { Link } from "react-router-dom";
+import Navbar from "../components/layout/NavBar";
 
 
 const CartPage = () => {
   return (
     <>
+    <Navbar/>
       <div className="container mx-auto mt-3 px-4">
         <div className="flex flex-col sm:flex-row justify-center items-center gap-2 text-sm mb-4 mt-10">
           <FaCircleCheck color="green"/>
@@ -36,11 +39,12 @@ const CartPage = () => {
             <p className="mb-2"><span className="font-bold mr-10 ">Delivery Price:</span> Rs. 100</p>
             <div className="border-b border-gray-500 w-60"></div>
             <p className="mb-2"><span className="font-bold mr-10 ">Total Price   :</span> Rs. 2102</p>
-            <button className="bg-black w-full  hover:bg-slate-800 hover:text-white text-white px-4 mt-3 py-2 rounded-md">
-              Add to Cart
-            </button>
+            <Link to="/delivery">
+      <button className="bg-black w-full hover:bg-slate-800 hover:text-white text-white px-4 mt-3 py-2 rounded-md">
+        Add to Cart
+      </button>
+    </Link>
           </div>
-          
         </div>
       </div>
     </>
