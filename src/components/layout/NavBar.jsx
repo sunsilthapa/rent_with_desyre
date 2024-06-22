@@ -6,6 +6,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logoImage from "../../assets/images/black_logo.png";
+import { FaBookBookmark } from "react-icons/fa6";
+import { FaShoppingCart } from "react-icons/fa";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -15,7 +17,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="w-full h-14 bg-white p-4 text-black mx-auto flex justify-between items-center">
+    <nav className="w-full h-14 bg-white p-4 text-black mx-auto flex justify-between items-center shadow-lg">
       <Link to="/" className="mr-4 cursor-pointer"><img src={logoImage} alt="Hero" className="w-12 h-auto" /></Link>
       
       <ul className="md:flex hidden">
@@ -34,14 +36,24 @@ const Navbar = () => {
             Sell an Attire
           </Link>
         </li>
+        <li className="mx-3 cursor-pointer">
+          <Link to="/product_detail" className="mr-4">
+            P
+          </Link>
+        </li>
       </ul>
       
-      <div className="md:flex hidden">
+      <div className="md:flex hidden gap-4 items-center">
+        <Link to='/favorite'><FaBookBookmark color="black"  size={15}/></Link>
+        <Link to='/cart'><FaShoppingCart color="black"  size={15} className="mr-5"/></Link>
         <Link to="/login" className="mr-4">
           Login
         </Link>
         <Link to="/signup" className="mr-4">
           Signup
+        </Link>
+        <Link to="/profile" className="mr-4">
+          Profile
         </Link>
       </div>
       
@@ -82,6 +94,7 @@ const Navbar = () => {
             </Link>
           </li>
         </ul>
+        
       </div>
     </nav>
   );
