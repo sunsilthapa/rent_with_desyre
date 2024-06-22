@@ -15,16 +15,16 @@ const SellAnAttirePage = () => {
         <div class=" mr-4 grid grid-cols-1 gap-x-6 gap-y-5 sm:grid-cols-6 ">
           <div class="sm:col-span-4 md:col-span-6 ">
             <label
-              for="full-name"
+              for="title"
               class="block text-sm font-medium leading-6 text-gray-900"
             >
-              Full Name
+              Title
             </label>
             <div class="mt-2">
               <input
                 type="text"
-                name="full-name"
-                id="full-name"
+                name="title"
+                id="title"
                 autocomplete="given-name"
                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
@@ -33,10 +33,27 @@ const SellAnAttirePage = () => {
 
           <div class="sm:col-span-4 md:col-span-6">
             <label
+              for="description"
+              class="block text-sm font-medium leading-6 text-gray-900"
+            >
+              Description
+            </label>
+            <div class="mt-2">
+              <input
+                type="text"
+                name="description"
+                id="description"
+                autocomplete="family-name"
+                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              />
+            </div>
+          </div>
+          <div class="sm:col-span-3">
+            <label
               for="brand-name"
               class="block text-sm font-medium leading-6 text-gray-900"
             >
-              Brand name
+              Brand Name
             </label>
             <div class="mt-2">
               <input
@@ -50,24 +67,7 @@ const SellAnAttirePage = () => {
           </div>
           <div class="sm:col-span-3">
             <label
-              for="brand-name"
-              class="block text-sm font-medium leading-6 text-gray-900"
-            >
-              Year of purchase
-            </label>
-            <div class="mt-2">
-              <input
-                type="text"
-                name="brand-name"
-                id="brand-name"
-                autocomplete="family-name"
-                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-              />
-            </div>
-          </div>
-          <div class="sm:col-span-3">
-            <label
-              for="brand-name"
+              for="size"
               class="block text-sm font-medium leading-6 text-gray-900"
             >
               Size
@@ -75,8 +75,8 @@ const SellAnAttirePage = () => {
             <div class="mt-2">
               <input
                 type="text"
-                name="brand-name"
-                id="brand-name"
+                name="size"
+                id="size-name"
                 autocomplete="family-name"
                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
@@ -84,16 +84,16 @@ const SellAnAttirePage = () => {
           </div>
           <div class="sm:col-span-3">
             <label
-              for="brand-name"
+              for="price"
               class="block text-sm font-medium leading-6 text-gray-900"
             >
-              MRP
+              Rental Price
             </label>
             <div class="mt-2">
               <input
                 type="text"
-                name="brand-name"
-                id="brand-name"
+                name="price"
+                id="price"
                 autocomplete="family-name"
                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
@@ -101,16 +101,16 @@ const SellAnAttirePage = () => {
           </div>
           <div class="sm:col-span-3">
             <label
-              for="brand-name"
+              for="category"
               class="block text-sm font-medium leading-6 text-gray-900"
             >
-              Year of Purchase
+              Category
             </label>
             <div class="mt-2">
               <input
                 type="text"
-                name="brand-name"
-                id="brand-name"
+                name="category"
+                id="category"
                 autocomplete="family-name"
                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
@@ -119,16 +119,16 @@ const SellAnAttirePage = () => {
 
           <div class="sm:col-span-4 md:col-span-6">
             <label
-              for="email"
+              for="condition"
               class="block text-sm font-medium leading-6 text-gray-900"
             >
-              Phone No
+              Condition
             </label>
             <div class="mt-2">
               <input
-                id="email"
-                name="email"
-                type="email"
+                id="condition"
+                name="condition"
+                type="text"
                 autocomplete="email"
                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
@@ -136,38 +136,22 @@ const SellAnAttirePage = () => {
           </div>
           <div class="sm:col-span-3">
             <label
-              for="brand-name"
+              for="availability"
               class="block text-sm font-medium leading-6 text-gray-900"
             >
-              Pickup Address
+              Availability
             </label>
             <div class="mt-2">
               <input
                 type="text"
-                name="brand-name"
-                id="brand-name"
+                name="availability"
+                id="availability"
                 autocomplete="family-name"
                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
           </div>
-          <div class="sm:col-span-3">
-            <label
-              for="brand-name"
-              class="block text-sm font-medium leading-6 text-gray-900"
-            >
-              Email Id
-            </label>
-            <div class="mt-2">
-              <input
-                type="text"
-                name="brand-name"
-                id="brand-name"
-                autocomplete="family-name"
-                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-              />
-            </div>
-          </div>
+          
         </div>
 
         {/* left side ends */}
